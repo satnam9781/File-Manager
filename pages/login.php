@@ -95,7 +95,7 @@ function togglePassword() {
 </html>
 <?php
 if(isset($_POST['login'])) {
-    if($_POST['username'] == 'satnam' && $_POST['password'] == 'this.Unlock()') {
+    if($_POST['username'] == 'satnam' && $_POST['password'] == 'satnam') {
         $_SESSION['fm_active'] = true;
         $_SESSION['wrong_pass'] = null;
         header('Location: ../index.php');

@@ -5,9 +5,6 @@ if(!isset($_SESSION['path'])) {
     $_SESSION['path'] = __DIR__ ; // Set current directory as default directory to open
     array_map("deleteFile", glob("pages/editor/*.php")); // Deletes temporary files, created for editing
 }
-if(!isset($_SESSION['fm_active'])) {
-    header('Location: pages/login.php');
-}
 function deleteFile($file) {
     if($file == "pages/editor/index.php") return true;
     $fileDate = new DateTime(date('Y-m-j',filemtime($file)));
